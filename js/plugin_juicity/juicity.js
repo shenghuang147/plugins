@@ -16,7 +16,7 @@ class juicityClass {
         this.defaultSharedStorage.serverAddress = "127.0.0.1";
         this.defaultSharedStorage.serverPort = "1080";
         // end of default keys
-        this.defaultSharedStorage.uuid = "00000000-0000-0000-0000-000000000000";
+        this.defaultSharedStorage.uuid = "";
         this.defaultSharedStorage.password = "";
         this.defaultSharedStorage.sni = "";
         this.defaultSharedStorage.allowInsecure = false;
