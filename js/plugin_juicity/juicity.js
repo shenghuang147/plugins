@@ -107,9 +107,14 @@ class juicityClass {
                         "title": TR("serverAllowInsecure"),
                     },
                     {
-                        "type": "EditTextPreference",
+                        "type": "SimpleMenuPreference",
                         "key": "congestionControl",
                         "icon": "ic_baseline_stream_24",
+                        "entries": {
+                            "bbr": "bbr",
+                            "cubic": "cubic",
+                            "new-reno": "new-reno",
+                        },
                         "title": TR("juicityCongestionControl"),
                     },
                 ],
