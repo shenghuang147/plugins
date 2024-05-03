@@ -213,9 +213,9 @@ export var translates = {
     // Juicity
     juicityCongestionControl: {
         "zh_CN": "拥塞控制",
-	"": "Congestion Control",
+        "": "Congestion Control",
     },
-    juicitySIN: {
-        "": "SIN",
+    juicitySNI: {
+        "": "SNI",
     },
 }
