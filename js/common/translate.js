@@ -209,4 +209,13 @@ export var translates = {
     wireguardMTU: {
         "": "MTU",
     },
+    
+    // Juicity
+    juicityCongestionControl: {
+        "zh_CN": "拥塞控制",
+	"": "Congestion Control",
+    },
+    juicitySIN: {
+        "": "SIN",
+    },
 }

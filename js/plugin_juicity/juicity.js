@@ -84,28 +84,33 @@ class juicityClass {
                         "type": "EditTextPreference",
                         "key": "uuid",
                         "icon": "ic_baseline_person_24",
+                        "title": "serverUserId",
                     },
                     {
                         "type": "EditTextPreference",
                         "key": "password",
                         "icon": "ic_settings_password",
                         "summaryProvider": "PasswordSummaryProvider",
+                        "title": "serverPassword",
                     },
                     //
                     {
                         "type": "EditTextPreference",
                         "key": "sni",
-                        "icon": "ic_action_copyright"
+                        "icon": "ic_action_copyright",
+                        "title": "juicitySIN",
                     },
                     {
                         "type": "SwitchPreference",
                         "key": "allowInsecure",
                         "icon": "ic_notification_enhanced_encryption",
+                        "title": "serverAllowInsecure",
                     },
                     {
                         "type": "EditTextPreference",
                         "key": "congestionControl",
                         "icon": "ic_baseline_stream_24",
+                        "title": "juicityCongestionControl",
                     },
                 ],
             },
