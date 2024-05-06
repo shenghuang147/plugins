@@ -21,6 +21,7 @@ class juicityClass {
         this.defaultSharedStorage.sni = "";
         this.defaultSharedStorage.allowInsecure = false;
         this.defaultSharedStorage.congestionControl = "bbr";
+        this.defaultSharedStorage.pinnedCertchainSha256 = "";
 
         for (var k in this.defaultSharedStorage) {
             let v = this.defaultSharedStorage[k];
@@ -57,6 +58,9 @@ class juicityClass {
         }
         if (this.sharedStorage.allowInsecure) {
             builder.searchParams.set("allow_insecure", "1")
+        }
+        if (this.sharedStorage.pinnedCertchainSha256) {
+            builder.searchParams.set("pinned_certchain_sha256", this.sharedStorage.pinnedCertchainSha256)
         }
         this.sharedStorage.shareLink = builder.toString()
     }
@@ -113,9 +117,15 @@ class juicityClass {
                         "entries": {
                             "bbr": "bbr",
                             "cubic": "cubic",
-                            "new-reno": "new-reno",
+                            "new_reno": "new_reno",
                         },
                         "title": TR("juicityCongestionControl"),
+                    },
+                    {
+                        "type": "EditTextPreference",
+                        "key": "pinnedCertchainSha256",
+                        "icon": "ic_baseline_vpn_key_24",
+                        "title": TR("juicityPinnedCertchainSha256")
                     },
                 ],
             },
@@ -193,6 +203,9 @@ class juicityClass {
         util.ifNotNull(url.searchParams.get("allow_insecure"), (it) => {
             if (it == "1" || it == "true") this.sharedStorage.allowInsecure = it
         })
+        util.ifNotNull(url.searchParams.get("pinned_certchain_sha256"), (it) => {
+            this.sharedStorage.pinnedCertchainSha256 = it
+        })
 
         this._onSharedStorageUpdated()
         return JSON.stringify(this.sharedStorage)
@@ -211,6 +224,7 @@ class juicityClass {
                 "sni": ss.sni,
                 "allow_insecure": ss.allowInsecure,
                 "congestion_control": ss.congestionControl,
+                "pinned_certchain_sha256": ss.pinnedCertchainSha256,
                 "log_level": "info",
                 "protect_path": "protect_path"
             };

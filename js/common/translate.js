@@ -218,4 +218,8 @@ export var translates = {
     juicitySNI: {
         "": "SNI",
     },
+    juicityPinnedCertchainSha256: {
+        "zh_CN": "固定证书链 SHA256 (可选)",
+        "": "Pinned Certchain SHA256 (Optional)"
+    },
 }
