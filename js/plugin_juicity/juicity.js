@@ -201,7 +201,7 @@ class juicityClass {
             this.sharedStorage.sni = it
         })
         util.ifNotNull(url.searchParams.get("allow_insecure"), (it) => {
-            if (it == "1" || it == "true") this.sharedStorage.allowInsecure = it
+            if (it == "1" || it == "true") this.sharedStorage.allowInsecure = true
         })
         util.ifNotNull(url.searchParams.get("pinned_certchain_sha256"), (it) => {
             this.sharedStorage.pinnedCertchainSha256 = it
