@@ -229,11 +229,13 @@ class juicityClass {
                 "protect_path": "protect_path"
             };
 
+            let uniqueConfigName = 'config-' + Math.random().toString(36).slice(2) + Date.now() + '.json';
+
             let v = {};
-            v.nekoCommands = ["%exe%", "run", "-c", "config.json"];
+            v.nekoCommands = ["%exe%", "run", "-c", uniqueConfigName];
             v.nekoRunConfigs = [
                 {
-                    name: "config.json",
+                    name: uniqueConfigName,
                     content: JSON.stringify(configObject),
                 },
             ];
