@@ -189,7 +189,7 @@ class juicityClass {
 
         var serverAddress = util.unwrapIpv6(url.hostname)
         this.sharedStorage.serverAddress = serverAddress
-        this.sharedStorage.serverPort = url.host.replace(serverAddress, "").substringAfter(":")
+        this.sharedStorage.serverPort = url.port
         this.sharedStorage.uuid = url.username
         this.sharedStorage.password = url.password
         this.sharedStorage.name = decodeURIComponent(url.hash.substringAfter("#"))
