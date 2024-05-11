@@ -216,6 +216,10 @@ class juicityClass {
             let args = util.decodeB64Str(b64Str);
             let ss = util.decodeB64Str(args.sharedStorage);
 
+            if (ss.pinnedCertchainSha256 != "") {
+                ss.pinnedCertchainSha256 = decodeURIComponent(ss.pinnedCertchainSha256)
+            }
+
             let configObject = {
                 "listen": "127.0.0.1:" + args.port,
                 "server": util.wrapUri(ss.serverAddress, ss.serverPort),
