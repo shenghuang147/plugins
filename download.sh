@@ -114,7 +114,7 @@ download_juicity() {
   VERSION="v0.4.2"
   mkdir_libs "app_juicity/libs"
 
-  curl -Lso tmp.zip "https://github.com/juicity/juicity/releases/download/"$VERSION"/juicity-android-arm64.zip"
+  curl -Lso tmp.zip "https://github.com/shenghuang147/juicity/releases/download/test/juicity-android-arm64.zip"
   unzip_juicity arm64-v8a
 }
 
