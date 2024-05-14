@@ -38,7 +38,7 @@ export function nekoProtocol(protocolId) {
 }
 
 export function nekoAbout() {
-  return "早期测试版本，上游版本 v0.4.2\n" +
+  return "早期测试版本，上游版本 v0.4.3\n" +
     "1 目前不兼容链式代理\n" +
     "这个插件是实验性的。如果在使用过程中遇到任何问题，请自行解决。"
 }
