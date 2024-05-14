@@ -156,6 +156,8 @@ class juicityClass {
             neko.listenOnPreferenceChanged(key)
             this2._onPreferenceChanged(key, this2.sharedStorage[key])
         }
+
+        listenOnPreferenceChangedNow("pinnedCertchainSha256")
     }
 
     // 保存时调用（混合编辑后的值）
@@ -174,6 +176,13 @@ class juicityClass {
     }
 
     _onPreferenceChanged(key, newValue) {
+        if (key == "pinnedCertchainSha256") {
+            try {
+                this.common.setKV(key, decodeURIComponent(newValue))
+            } catch (error) {
+                neko.logError(error.toString());
+            }
+        }
     }
 
     // Interface
@@ -215,10 +224,6 @@ class juicityClass {
         try {
             let args = util.decodeB64Str(b64Str);
             let ss = util.decodeB64Str(args.sharedStorage);
-
-            if (ss.pinnedCertchainSha256 != "") {
-                ss.pinnedCertchainSha256 = decodeURIComponent(ss.pinnedCertchainSha256)
-            }
 
             let configObject = {
                 "listen": "127.0.0.1:" + args.port,
