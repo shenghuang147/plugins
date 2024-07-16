@@ -115,9 +115,7 @@ class juicityClass {
                         "key": "congestionControl",
                         "icon": "ic_baseline_stream_24",
                         "entries": {
-                            "bbr": "bbr",
-                            "cubic": "cubic",
-                            "new_reno": "new_reno",
+                            "bbr": "bbr"
                         },
                         "title": TR("juicityCongestionControl"),
                     },
