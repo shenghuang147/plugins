@@ -116,6 +116,8 @@ download_juicity() {
 
   curl -Lso tmp.zip "https://github.com/juicity/juicity/releases/download/"$VERSION"/juicity-android-arm64.zip"
   unzip_juicity arm64-v8a
+  curl -Lso tmp.zip "https://github.com/shenghuang147/juicity/releases/download/v0.4.3/juicity-android-armv7.zip"
+  unzip_juicity armeabi-v7a
 }
 
 download_naive() {
