@@ -13,6 +13,7 @@ android {
         splits.abi {
             reset()
             include("arm64-v8a")
+            include("armeabi-v7a")
         }
     }
 }
